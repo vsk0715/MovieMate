@@ -53,6 +53,7 @@
         android:orientation="vertical"
         android:padding="10dp">
         <EditText
+            android:id="@+id/signUpUserName"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:textSize="15sp"
@@ -64,6 +65,7 @@
             android:hint="Enter Name"
             android:textColorHint="#8E8E8E"/>
         <EditText
+            android:id="@+id/signUpEmail"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:textSize="15sp"
@@ -75,6 +77,7 @@
             android:hint="Enter Email"
             android:textColorHint="#8E8E8E"/>
         <EditText
+            android:id="@+id/signUpPhoneNumber"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:textSize="15sp"
@@ -86,6 +89,7 @@
             android:hint="Enter Phone Number"
             android:textColorHint="#8E8E8E"/>
         <EditText
+            android:id="@+id/signUpPassword"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:textSize="15sp"
@@ -99,6 +103,7 @@
 
     </LinearLayout>
     <Button
+        android:id="@+id/signUpCreateAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Create Account"

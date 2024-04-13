@@ -63,7 +63,36 @@ public class SplashScreen extends AppCompatActivity {
     }
     private void updateUI(FirebaseUser currentUser) {
         // Implement UI update based on the user's authentication status
-        if (currentUser != null) {
+        if (currentUser.getUid().equals("aSwa4DvxEkNxPDS7XRNMLU2gpdF2")) {
+            TextView tvClique = findViewById(R.id.tvMovieMate);
+            ImageView splashLogo = findViewById(R.id.splashActivityLogo);
+            AlphaAnimation fadeInAnimation = new AlphaAnimation(0.0f, 1.0f);
+            fadeInAnimation.setDuration(ANIMATION_DURATION);
+            fadeInAnimation.setRepeatMode(AlphaAnimation.REVERSE);
+            fadeInAnimation.setRepeatCount(1); // Set repeat count to 1 for reverse animation
+
+            // Apply fade-in animation
+            tvClique.startAnimation(fadeInAnimation);
+            splashLogo.startAnimation(fadeInAnimation);
+            fadeInAnimation.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {
+                    // Do nothing
+                }
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    // Start the new activity when fade-out animation finishes
+                    startActivity(new Intent(SplashScreen.this, Admin.class));
+                    finish();// Finish the current activity
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {
+                    // Do nothing
+                }
+            });
+        } else if (currentUser != null) {
             TextView tvClique = findViewById(R.id.tvMovieMate);
             ImageView splashLogo = findViewById(R.id.splashActivityLogo);
             AlphaAnimation fadeInAnimation = new AlphaAnimation(0.0f, 1.0f);

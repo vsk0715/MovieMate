@@ -13,6 +13,18 @@
         android:theme="@style/Theme.MovieMate"
         tools:targetApi="31">
         <activity
+            android:name=".AddTheatre"
+            android:exported="false" />
+        <activity
+            android:name=".ViewDetails"
+            android:exported="false" />
+        <activity
+            android:name=".AddEntities"
+            android:exported="false" />
+        <activity
+            android:name=".Admin"
+            android:exported="false" />
+        <activity
             android:name=".SignIn"
             android:exported="false" />
         <activity

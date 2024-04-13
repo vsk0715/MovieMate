@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTheatre"
+    android:background="#000732">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profileToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bar_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Add Theaters"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/tvTheatreName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Name"
+        android:layout_margin="12dp"
+        android:textSize="18dp"
+        android:layout_below="@+id/profileToolbar"/>
+    <EditText
+        android:id="@+id/editTextTheatreName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:hint="Enter Theatre Name"
+        android:textColor="@color/white"
+        android:textColorHint="#959595"
+        android:background="@drawable/border"
+        android:layout_below="@+id/tvTheatreName"
+        android:layout_marginHorizontal="10dp"/>
+    <TextView
+        android:id="@+id/tvTheatreLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Location"
+        android:layout_margin="12dp"
+        android:textSize="18dp"
+        android:layout_below="@+id/editTextTheatreName"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/editTextLocation"
+        android:textColor="@color/white"
+        android:hint="Enter Theatre Location"
+        android:textColorHint="#959595"
+        android:background="@drawable/border"
+        android:layout_below="@+id/tvTheatreLocation"
+        android:layout_marginHorizontal="10dp"/>
+    <TextView
+        android:id="@+id/tvTheatrePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Picture"
+        android:layout_margin="12dp"
+        android:textSize="18dp"
+        android:layout_below="@+id/editTextLocation"/>
+    <ImageView
+        android:id="@+id/imageViewTheatrePic"
+        android:layout_width="444dp"
+        android:layout_height="250dp"
+        android:layout_below="@+id/tvTheatrePicture"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/camera"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="center"
+        app:tint="#595959"
+        android:background="@drawable/border"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#DD2C00"
+        android:text="Add Theatre"
+        android:id="@+id/btnAddTheatre"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageViewTheatrePic"/>
+
+
+
+</RelativeLayout>
