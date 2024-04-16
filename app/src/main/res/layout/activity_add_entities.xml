@@ -22,6 +22,8 @@
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/theatreRecyclerView"
+        android:padding="5dp"
         android:layout_below="@+id/profileToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>

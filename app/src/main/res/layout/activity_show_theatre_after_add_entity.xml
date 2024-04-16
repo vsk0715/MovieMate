@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin"
+    tools:context=".ShowTheatreAfterAddEntity"
     android:background="#000732">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/profileToolbar"
@@ -13,39 +13,38 @@
         android:background="@drawable/bar_background">
 
         <TextView
+            android:id="@+id/tvTheatreName"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Admin Panel"
+            android:hint="Theatre Name"
+            android:textColorHint="#8E8E8E"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:gravity="right|center_vertical">
-        <ImageView
-            android:id="@+id/addEntities"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/add"
-            android:layout_marginHorizontal="10dp"/>
-        <ImageView
-            android:id="@+id/viewDetails"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/database"
-            android:layout_marginHorizontal="10dp"/>
-
-    </LinearLayout>
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/theatreRecyclerViewAdmin"
-        android:padding="5dp"
+    <ImageView
         android:layout_below="@+id/profileToolbar"
+        android:id="@+id/theatreImage"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:layout_width="368dp"
+        android:layout_height="207dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movieTheatreAddEntity"
+        android:padding="5dp"
+        android:layout_below="@+id/theatreImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addMovie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/add"
+        app:tint="#fff"
+        android:backgroundTint="#011068"/>
 
 </RelativeLayout>

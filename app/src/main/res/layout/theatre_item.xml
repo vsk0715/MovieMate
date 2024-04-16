@@ -13,14 +13,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:gravity="center_vertical"
         android:layout_centerVertical="true"
+        android:layout_margin="5dp"
         android:layout_toRightOf="@id/addEntityTheatreImage">
         <TextView
+            android:id="@+id/addEntityTheatreName"
             android:layout_width="wrap_content"
+            android:textColor="@color/white"
             android:layout_height="wrap_content"
             android:hint="Name"
             />
         <TextView
+            android:id="@+id/addEntityTheatreLocation"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Name"
