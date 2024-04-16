@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "417466711012",
+    "project_id": "moviemateproject",
+    "storage_bucket": "moviemateproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417466711012:android:0266030ebf95a36eae25f1",
+        "android_client_info": {
+          "package_name": "com.project.moviemate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCVWQq7Ik6Jx6hRbN_D9D1iy85lZTAKu7k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
