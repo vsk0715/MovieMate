@@ -22,7 +22,7 @@ import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Admin extends AppCompatActivity {
-    ImageView addEntities, viewDetails;
+    ImageView addEntities, viewDetails, logout;
     RecyclerView theatreRecyclerViewAdmin;
     AddEntityTheatreAdapter addEntityTheatreAdapter;
     List<Theatre> theatres;
@@ -33,6 +33,7 @@ public class Admin extends AppCompatActivity {
         setContentView(R.layout.activity_admin);
         addEntities = findViewById(R.id.addEntities);
         viewDetails = findViewById(R.id.viewDetails);
+        logout = findViewById(R.id.logOut);
         addEntities.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +44,14 @@ public class Admin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Admin.this, ViewDetails.class));
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(getApplicationContext(), LogInActivity.class));
+                finish();
             }
         });
         theatreRecyclerViewAdmin = findViewById(R.id.theatreRecyclerViewAdmin);

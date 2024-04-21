@@ -38,6 +38,12 @@
             android:layout_height="30dp"
             android:src="@drawable/database"
             android:layout_marginHorizontal="10dp"/>
+        <ImageView
+            android:id="@+id/logOut"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/logout"
+            android:layout_marginHorizontal="10dp"/>
 
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView

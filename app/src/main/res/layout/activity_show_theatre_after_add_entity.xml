@@ -30,10 +30,18 @@
         android:layout_margin="5dp"
         android:layout_width="368dp"
         android:layout_height="207dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Available Movies"
+        android:id="@+id/tv"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:layout_below="@id/theatreImage"/>
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/movieTheatreAddEntity"
+        android:id="@+id/moviesRecyclerView"
         android:padding="5dp"
-        android:layout_below="@+id/theatreImage"
+        android:layout_below="@+id/tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <com.google.android.material.floatingactionbutton.FloatingActionButton

@@ -1,9 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddMovie">
+    tools:context=".AddMovie"
+    android:background="#000732">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profileToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bar_background">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Add Movies"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:id="@+id/tvMovieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Movie Name"
+        android:layout_marginHorizontal="12dp"
+        android:textSize="14dp"
+        android:layout_below="@+id/profileToolbar"/>
+    <EditText
+        android:id="@+id/editTextMovieName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="14dp"
+        android:hint="Enter Movie Name"
+        android:textColor="@color/white"
+        android:textColorHint="#959595"
+        android:background="@drawable/border"
+        android:layout_below="@+id/tvMovieName"
+        android:layout_marginHorizontal="10dp"/>
+    <TextView
+        android:id="@+id/tvMovieDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Movie Description"
+        android:layout_marginHorizontal="12dp"
+        android:textSize="14dp"
+        android:layout_below="@+id/editTextMovieName"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="12dp"
+        android:id="@+id/editTextMovieDescription"
+        android:textColor="@color/white"
+        android:hint="Enter Movie Description"
+        android:textColorHint="#959595"
+        android:background="@drawable/border"
+        android:layout_below="@+id/tvMovieDescription"
+        android:layout_marginHorizontal="10dp"/>
+    <TextView
+        android:id="@+id/tvMovieActors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Actors In Movie"
+        android:layout_marginHorizontal="12dp"
+        android:textSize="14dp"
+        android:layout_below="@+id/editTextMovieDescription"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:id="@+id/editTextMovieActors"
+        android:textColor="@color/white"
+        android:hint="Enter Movie Actors"
+        android:textSize="12dp"
+        android:textColorHint="#959595"
+        android:background="@drawable/border"
+        android:layout_below="@+id/tvMovieActors"
+        android:layout_marginHorizontal="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:id="@+id/tvTicketPrice"
+        android:text="Ticket Price"
+        android:layout_marginHorizontal="12dp"
+        android:textSize="14dp"
+        android:layout_below="@+id/editTextMovieActors"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="12dp"
+        android:id="@+id/editTextTicketPrice"
+        android:textColor="@color/white"
+        android:hint="Enter Ticket Price"
+        android:inputType="number"
+        android:textColorHint="#959595"
+        android:background="@drawable/border"
+        android:layout_below="@+id/tvTicketPrice"
+        android:layout_marginHorizontal="10dp"/>
+
+    <TextView
+        android:id="@+id/tvMoviePicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Picture"
+        android:layout_marginHorizontal="12dp"
+        android:textSize="14dp"
+        android:layout_below="@+id/editTextTicketPrice"/>
+    <ImageView
+        android:id="@+id/imageViewMoviePic"
+        android:layout_width="444dp"
+        android:layout_height="250dp"
+        android:layout_below="@+id/tvMoviePicture"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/camera"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="center"
+        app:tint="#595959"
+        android:background="@drawable/border"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#DD2C00"
+        android:text="Select Photo And Add Movie"
+        android:id="@+id/btnAddMovie"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageViewMoviePic"/>
+
+</RelativeLayout>
