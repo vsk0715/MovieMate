@@ -1,8 +1,5 @@
 package com.project.moviemate;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,9 +10,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.github.dhaval2404.imagepicker.ImagePicker;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -73,7 +72,7 @@ public class AddTheatre extends AppCompatActivity {
             String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
             // Define the path in Firebase Storage where the image will be stored
-            StorageReference TheatrePictureFolder = storageReference.child("TheatrePictureFolder").child(userId);
+            StorageReference TheatrePictureFolder = storageReference.child("TheatrePictureFolder").child("wzxOzD2mXbdMwyX6jRW0xzMFyyI2");
             StorageReference TheatreImageRef = TheatrePictureFolder.child("Theatre_" + System.currentTimeMillis() + ".jpg");
 
             // Upload the image to Firebase Storage
@@ -88,7 +87,7 @@ public class AddTheatre extends AppCompatActivity {
                             postData.put("location",Location);
                             postData.put("name", Name);
                             FirebaseFirestore.getInstance().collection("users")
-                                    .document(userId)
+                                    .document("wzxOzD2mXbdMwyX6jRW0xzMFyyI2")
                                     .collection("Theatre")
                                     .document()
                                     .set(postData)

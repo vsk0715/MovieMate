@@ -14,7 +14,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.github.dhaval2404.imagepicker.ImagePicker;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -77,10 +76,9 @@ public class AddMovie extends AppCompatActivity {
     private void uploadImageToFirebase(Uri imageUri) {
         if (imageUri != null) {
             // Get the current user ID
-            String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
             // Define the path in Firebase Storage where the image will be stored
-            StorageReference moviePictureFolder = storageReference.child("MoviePictureFolder").child(userId);
+            StorageReference moviePictureFolder = storageReference.child("MoviePictureFolder").child("wzxOzD2mXbdMwyX6jRW0xzMFyyI2");
             StorageReference movieImageRef = moviePictureFolder.child("movie_" + System.currentTimeMillis() + ".jpg");
 
             // Upload the image to Firebase Storage
@@ -99,7 +97,7 @@ public class AddMovie extends AppCompatActivity {
                             movieData.put("name", Name);
                             movieData.put("price", price);
                             FirebaseFirestore.getInstance().collection("users")
-                                    .document(userId)
+                                    .document("wzxOzD2mXbdMwyX6jRW0xzMFyyI2")
                                     .collection("Theatre")
                                     .document(theatreID)
                                     .collection("movie")

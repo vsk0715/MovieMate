@@ -52,7 +52,7 @@ public class ShowTheatreAfterAddEntity extends AppCompatActivity {
                 .error(R.drawable.camera)
                 .into(theatreImage);
         db.collection("users")
-                        .document("aSwa4DvxEkNxPDS7XRNMLU2gpdF2")
+                        .document("wzxOzD2mXbdMwyX6jRW0xzMFyyI2")
                                 .collection("Theatre")
                                         .document(Objects.requireNonNull(intent.getStringExtra("TheatreID")))
                                                 .collection("movie")

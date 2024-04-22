@@ -41,7 +41,7 @@ public class AddEntities extends AppCompatActivity {
         theatres = new ArrayList<>();
         theatres.clear();
         db.collection("users")
-                        .document("aSwa4DvxEkNxPDS7XRNMLU2gpdF2")
+                        .document("wzxOzD2mXbdMwyX6jRW0xzMFyyI2")
                                 .collection("Theatre")
                                         .get()
                                                 .addOnCompleteListener(task -> {

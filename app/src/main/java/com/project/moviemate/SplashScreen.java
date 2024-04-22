@@ -1,13 +1,13 @@
 package com.project.moviemate;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -57,13 +57,14 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
+        mAuth = FirebaseAuth.getInstance();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
     }
     private void updateUI(FirebaseUser currentUser) {
         // Implement UI update based on the user's authentication status
-        if (currentUser.getUid().equals("aSwa4DvxEkNxPDS7XRNMLU2gpdF2")) {
+        if (currentUser != null && currentUser.getUid().equals("wzxOzD2mXbdMwyX6jRW0xzMFyyI2")) {
             TextView tvClique = findViewById(R.id.tvMovieMate);
             ImageView splashLogo = findViewById(R.id.splashActivityLogo);
             AlphaAnimation fadeInAnimation = new AlphaAnimation(0.0f, 1.0f);
