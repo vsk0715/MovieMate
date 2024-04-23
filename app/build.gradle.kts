@@ -45,5 +45,6 @@ dependencies {
     implementation("com.github.dhaval2404:imagepicker:2.1")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     implementation("com.github.bumptech.glide:glide:4.16.0")
+    implementation("com.intuit.sdp:sdp-android:1.1.1")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }

@@ -9,7 +9,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/profileToolbar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="@dimen/_50sdp"
         android:background="@drawable/bar_background">
 
         <TextView
@@ -23,7 +23,7 @@
     </androidx.appcompat.widget.Toolbar>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/theatreRecyclerView"
-        android:padding="5dp"
+        android:padding="@dimen/_5sdp"
         android:layout_below="@+id/profileToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
