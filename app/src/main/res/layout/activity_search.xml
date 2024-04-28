@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity"
+    android:orientation="vertical"
+    android:background="#000732"
+    android:padding="@dimen/_12sdp"
+    android:gravity="center_vertical|top">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <EditText
+            android:id="@+id/etSearchMovie"
+            android:hint="Search Movie"
+            android:textColor="@color/white"
+            android:textColorHint="#595959"
+            android:paddingStart="@dimen/_12sdp"
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/search_border"/>
+        <ImageView
+            android:id="@+id/search_movie"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/search"
+            android:layout_marginHorizontal="@dimen/_5sdp"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchMovies"
+        android:layout_marginTop="@dimen/_15sdp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookTicketActivity"
+    android:background="#000732"
+    android:orientation="vertical"
+    android:gravity="center|top">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center|top">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/profileToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/bar_background">
+
+                <TextView
+                    android:id="@+id/MovieTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Movie"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.Toolbar>
+
+            <ImageView
+                android:id="@+id/MovieImage"
+                android:layout_width="400dp"
+                android:layout_height="225dp"
+                android:layout_margin="2dp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:src="@drawable/camera"/>
+            <TextView
+                android:id="@+id/MovieDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:text="hello world"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:text="Actors :"/>
+            <TextView
+                android:id="@+id/MovieActors"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:text="hello world"/>
+            <TextView
+                android:id="@+id/TheatreName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:text="Theatre Name"/>
+            <TextView
+                android:id="@+id/MovieTicketPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:text="Ticket Price"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btnBookTicket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book Ticket"
+        android:layout_gravity="bottom"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        android:backgroundTint="#D50000"/>
+
+
+</RelativeLayout>
