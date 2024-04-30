@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserAccount"
+    android:orientation="vertical"
+    android:background="#000732">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/profileToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/bar_background">
+
+        <TextView
+            android:id="@+id/MovieTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Helloo"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:id="@+id/profileInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileToolbar"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Name"
+            android:textColorHint="#8E8E8E"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:id="@+id/userName"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Email ID"
+            android:textColorHint="#8E8E8E"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:id="@+id/emailID"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:textColorHint="#8E8E8E"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:id="@+id/phoneNumber"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:id="@+id/tv3"
+        android:text="Your Tickets"
+        android:layout_below="@+id/profileInfo"
+        android:layout_margin="@dimen/_10sdp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv3"
+        android:padding="@dimen/_4sdp"
+        android:id="@+id/recyclerViewMovieTickets"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/logout"
+        android:backgroundTint="#232847"
+        android:src="@drawable/logout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/_10sdp"/>
+
+
+</RelativeLayout>

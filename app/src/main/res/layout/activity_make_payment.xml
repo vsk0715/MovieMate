@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MakePayment"
+    android:background="#000732">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/profileToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/bar_background">
+
+                <TextView
+                    android:id="@+id/MovieTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="Make Payment"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.Toolbar>
+            <ImageView
+                android:id="@+id/MovieImage"
+                android:layout_width="400dp"
+                android:layout_height="225dp"
+                android:layout_margin="2dp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:src="@drawable/camera"/>
+            <TextView
+                android:id="@+id/TheatreName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:text="Theatre Name"/>
+            <TextView
+                android:id="@+id/MovieTicketPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:text="Ticket Price"/>
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:text="Select number of Seats"/>
+            <Spinner
+                android:layout_width="@dimen/_100sdp"
+                android:background="@drawable/border"
+                android:backgroundTint="@color/white"
+                android:layout_height="@dimen/_30sdp"
+                android:id="@+id/noOFTickets"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_15sdp"
+                    android:textColor="@color/white"
+                    android:hint="Select date"
+                    android:textColorHint="#8F8F8F"/>
+                <Button
+                    android:id="@+id/selectDateButton"
+                    android:layout_width="wrap_content"
+                    android:backgroundTint="#D50000"
+                    android:layout_height="wrap_content"
+                    android:text="Select Date" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:text="Total:"/>
+
+            <TextView
+                android:id="@+id/totalMovieTicketPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="@color/white"
+                android:text="Ticket Price"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:src="@drawable/gp"/>
+                <ImageView
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:src="@drawable/paytem"/>
+            </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Make Payment"
+                android:id="@+id/makePayment"
+                android:layout_marginHorizontal="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:backgroundTint="#D50000"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

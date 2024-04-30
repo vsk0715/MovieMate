@@ -54,6 +54,7 @@ public class UserMoviesAdapter extends RecyclerView.Adapter<UserMoviesAdapter.Us
                 intent.putExtra("MovieDescription", movie.getMovieDescription());
                 intent.putExtra("MovieActors", actors);
                 intent.putExtra("MovieTicketPrice", "Ticket Price: " + movie.getTicketPrice() + " Rs" +"");
+                intent.putExtra("ticketPrice", movie.getTicketPrice());
                 v.getContext().startActivity(intent);
             }
 
