@@ -77,6 +77,7 @@ public class Admin extends AppCompatActivity {
                             Theatre theatre = new Theatre(theatreName, theatreLocation, theatreImageUrl, theatreID);
                             theatres.add(theatre);
                             count.getAndIncrement();
+                            int version = 0;
 
 
                         }
